@@ -12,22 +12,22 @@ from . import *
 # -------------------------------------------------------------------------------
 
 ALIVE_TEMP = """
-<b><i>🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥</b></i>
+<b><i>🔥🔥𝒜𝓈𝓈𝒾𝓈𝓉𝒶𝓃𝓉 ɨs օռʟɨռɛ🔥🔥</b></i>
 <i><b>↼ Øwñêr ⇀</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
 ╭──────────────
 ┣─ <b>» Telethon ~</b> <i>{}</i>
-┣─ <b>» Hêllẞø† ~</b> <i>{}</i>
+┣─ <b>» 𝒜𝓈𝓈𝒾𝓈𝓉𝒶𝓃𝓉 ~</b> <i>{}</i>
 ┣─ <b>» Sudo ~</b> <i>{}</i>
 ┣─ <b>» Uptime ~</b> <i>{}</i>
 ┣─ <b>» Ping ~</b> <i>{}</i>
 ╰──────────────
-<b><i>»»» <a href='https://t.me/its_hellbot'>[ †hê Hêllẞø† ]</a> «««</i></b>
+<b><i>»»» <a href='https://t.me/groupscout_bot'>[ †hê 𝒜𝓈𝓈𝒾𝓈𝓉𝒶𝓃𝓉 ]</a> «««</i></b>
 """
 
 msg = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Hêllẞø† ≈</b>  <i>{}</i>
+<b>𝒜𝓈𝓈𝒾𝓈𝓉𝒶𝓃𝓉 ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -52,7 +52,7 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+        PIC = "https://telegra.ph/file/6aa4511d1d19f22eff650.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
     omk = ALIVE_TEMP.format(ForGo10God, alive_name, tel_ver, hell_ver, is_sudo, uptime, ling)
@@ -66,11 +66,11 @@ async def up(event):
     await hell.delete()
 
 
-@hell_cmd(pattern="hell$")
+@hell_cmd(pattern="assist$")
 async def hell_a(event):
     ForGo10God, HELL_USER, hell_mention = await client_id(event)
     uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>»» нєℓℓвσт ιѕ σиℓιиє ««</b>"
+    am = gvarstat("ALIVE_MSG") or "<b>»» 𝒜𝓈𝓈𝒾𝓈𝓉𝒶𝓃𝓉 ιѕ σиℓιиє ««</b>"
     try:
         hell = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await hell[0].click(event.chat_id)
@@ -87,7 +87,7 @@ async def hell_a(event):
 CmdHelp("alive").add_command(
     "alive", None, "Shows the Default Alive Message"
 ).add_command(
-    "hell", None, "Shows Inline Alive Menu with more details."
+    "assist", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
     "✅ Harmless Module"
 ).add()
