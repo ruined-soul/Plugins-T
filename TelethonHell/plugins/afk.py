@@ -117,7 +117,7 @@ async def on_afk(event):
             )
         else:
             message_to_reply = (
-                f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
+                f"**I'm AFK hu!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                 + f"\n**💬 Reason :** {reason_1}"
             )
         msg = await event.reply(message_to_reply, file=hellpic_1)
